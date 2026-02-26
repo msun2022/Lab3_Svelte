@@ -11,9 +11,9 @@
 <p>This is a picture of me during the 2025 spring semester.</p>
 
 <nav>
-    <a href="/" class="current">Home</a>
-    <a href="/projects">Projects</a>
-    <a href="/contact">Contact</a>
-    <a href="/resume">CV</a>
+    <a href="." class="current">Home</a>
+    <a href="./projects">Projects</a>
+    <a href="./contact">Contact</a>
+    <a href="./resume">CV</a>
     <a href="https://github.com/msun2022" target="_blank">Github</a>
 </nav>
