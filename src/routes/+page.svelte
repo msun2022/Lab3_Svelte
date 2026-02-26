@@ -1,3 +1,10 @@
+<script>
+  import projects from "$lib/projects.json";
+  import Project from "$lib/Project.svelte";
+  import readings from "$lib/reading.json";
+  import ReadingItem from "$lib/ReadingItem.svelte";
+</script>
+
 <h1>Maxwell Sun</h1>
 <p>
     I am currently a fourth year undergraduate at MIT studying math and 
@@ -9,6 +16,20 @@
 </p>
 <img src="images/formal_pic.png" alt="Headshot of me in suit" >
 <p>This is a picture of me during the 2025 spring semester.</p>
+
+<h2>My Reading List (Hopeful)</h2>
+<div class="reading">
+    {#each readings as r}
+        <ReadingItem data={r} />
+    {/each}
+</div>
+
+<h2>Latest Projects</h2>
+<div class="projects">
+    {#each projects.slice(0, 3) as p}
+        <Project data={p} />
+    {/each}
+</div>
 
 <nav>
     <a href="." class="current">Home</a>

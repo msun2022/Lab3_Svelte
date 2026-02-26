@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Project Number 1",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Description for project number 1. This is one is the first project that I will talk about. Not sure what it is yet."
+    },
+    {
+        "title": "Project Number 2",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Description for project number 2"
+    },
+    {
+        "title": "Project Number 3",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Description for project number 3"
+    },
+    {
+        "title": "Project Number 4",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Description for project number 4"
+    },
+    {
+        "title": "Project Number 5",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Description for project number 5"
+    },
+    {
+        "title": "Project Number 6",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Description for project number 6"
+    },
+    {
+        "title": "Project Number 7",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Description for project number 7"
+    }
+]

@@ -118,7 +118,7 @@ form button {
 Project Page Formatting
 */
 
-img {
+/* img {
   max-width: 100%;
 }
 
@@ -136,10 +136,22 @@ img {
 
 .projects article h2 {
   margin: 0; 
+} */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1em;
 }
 
 h1 {
   font-size: 4rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {

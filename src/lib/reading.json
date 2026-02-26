@@ -1,0 +1,26 @@
+[
+    {
+        "title": "The Muscle Ladder", 
+        "author": "Jeff Nippard", 
+        "image": "images/muscle_ladder.jpg", 
+        "thoughts": "I haven't actually started reading this, but I heard it's really good. I think this will help me out in my programming choices in the future."
+    },
+    {
+        "title": "Options, Futures, and Other Derivatives",
+        "author": "John C. Hull", 
+        "image": "images/options_futures_derivatives.jpg",
+        "thoughts": "I believe that this book will be very useful for me in my career in quant finance. I've dabbled in a couple sections on options pricing, but have not looked at most of it yet."
+    },
+    {
+        "title": "The Elements of Statistical Learning", 
+        "author": "Jerome H. Friedman, Robert Tibshirani, and Trevor Hastie",
+        "image": "images/elements_stat_learn.jpg", 
+        "thoughts": "Another more career-oriented reading that I have not started yet. I am already familiar with some of the concepts, but I believe this will be great in solidfying my fundamental knowledge in statistics and machine learning."
+    },
+    {
+        "title": "Green Eggs and Ham",
+        "author": "Dr. Seuss",
+        "image": "images/green_eggs_ham.jpg",
+        "thoughts": "This one is a bit difficult."
+    }
+]
