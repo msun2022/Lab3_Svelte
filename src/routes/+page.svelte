@@ -32,7 +32,7 @@
 </div>
 
 <nav>
-    <a href="." class="current">Home</a>
+    <a href="./" class="current">Home</a>
     <a href="./projects">Projects</a>
     <a href="./contact">Contact</a>
     <a href="./resume">CV</a>
