@@ -1,0 +1,185 @@
+:root {
+  --color-accent: oklch(65% 0.5 240);
+}
+
+body {
+ /* Set line height to 1.5 times the font size
+    and use the OS’s UI font as the website font
+  */
+ font: 100%/1.5 system-ui;
+ max-width: 110ch;
+ margin-inline: auto;
+ padding: 5%;
+ accent-color: var(--color-accent);
+}
+
+/*
+Navigation Bar Formatting
+*/
+
+nav {
+  display: flex;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: oklch(80% 3% 200);
+  /*
+  Add a similar border above the nav bar, since ours are at page bottom
+  */
+  border-top-width: 1 px;
+  border-top-style: solid;
+  border-top-color: oklch(80% 3% 200);
+}
+
+nav a.current {
+  border-bottom-width: 0.4em;
+  padding-bottom: 0em;
+  border-top-width: 0.4em;
+  padding-top: 0em;
+}
+
+nav a:hover {
+  border-bottom-color: var(--color-accent);
+  border-top-color: var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+  border-bottom-width: 0.4em;
+  padding-bottom: 0em;
+  border-top-width: 0.4em;
+  padding-top: 0em;
+}
+
+/*
+Contact Form Formatting
+*/
+
+textarea {
+  font: inherit;
+}
+
+input {
+  font: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+/*
+form label {
+  display: block;
+  margin-block: 0.5rem 0.25rem;
+}
+
+form input,
+form textarea,
+form button,
+form select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+*/
+
+
+form {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1em;
+}
+
+form label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  grid-column: 1 / -1;
+  padding: 0.5em 1em;
+}
+
+/*
+Project Page Formatting
+*/
+
+img {
+  max-width: 100%;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+.projects article h2 {
+  margin: 0; 
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/*
+Resume Formatting
+*/
+
+.resume section {
+  margin-block: 3rem;
+}
+
+.resume article {
+  margin-block: 1.5rem;
+}
+
+.company {
+  color: navy;
+  font-weight: 600;
+}
+
+.skills {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.skill-list li {
+  background-color: rgb(0, 204, 255);
+  color: navy;
+  padding: 0.25em 0.25em;
+  font-size: 0.9rem;
+}
+
