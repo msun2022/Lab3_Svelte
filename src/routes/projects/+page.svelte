@@ -21,7 +21,7 @@
 
 
 <nav>
-    <a href="/">Home</a>
+    <a href="..">Home</a>
     <a href="." class="current">Projects</a>
     <a href="../contact">Contact</a>
     <a href="../resume">CV</a>
