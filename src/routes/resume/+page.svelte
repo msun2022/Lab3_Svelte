@@ -200,12 +200,12 @@
     </section>
     </div>
 
-    <nav>
+    <!-- <nav>
         <a href="../">Home</a>
         <a href="../projects">Projects</a>
         <a href="../contact">Contact</a>
         <a href="./" class="current">CV</a>
         <a href="https://github.com/msun2022" target="_blank">Github</a>
-    </nav>
+    </nav> -->
 
 

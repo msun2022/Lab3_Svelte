@@ -20,12 +20,12 @@
 </div>
 
 
-<nav>
+<!-- <nav>
     <a href="../">Home</a>
     <a href="./" class="current">Projects</a>
     <a href="../contact">Contact</a>
     <a href="../resume">CV</a>
     <a href="https://github.com/msun2022" target="_blank">Github</a>
-</nav>
+</nav> -->
 
 
