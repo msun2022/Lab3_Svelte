@@ -25,14 +25,15 @@
     h3 {
         font-family: serif;
         font-weight: 800;
-        color: #020202; 
+        /* color: #020202; */
         margin-bottom: 0rem;
     }
 
     /* Softening the authro sub-header to a dark grey */
     h4 {
         font-family: sans-serif; 
-        color: #414141; 
+        /* color: #414141; */
+        opacity: 0.8;
         font-weight: 500;
         margin-top: 0rem;
     }

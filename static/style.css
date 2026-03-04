@@ -17,60 +17,11 @@ body {
 Navigation Bar Formatting
 */
 
-nav {
-  display: flex;
-  margin-bottom: 1em;
-  margin-top: 2em;
-}
-
-nav a {
-  flex: 1;
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  padding: 0.5em;
-
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
-  /*
-  Add a similar border above the nav bar, since ours are at page bottom
-  */
-  border-top-width: 1 px;
-  border-top-style: solid;
-  border-top-color: oklch(80% 3% 200);
-}
-
-nav a.current {
-  border-bottom-width: 0.4em;
-  padding-bottom: 0em;
-  border-top-width: 0.4em;
-  padding-top: 0em;
-}
-
-nav a:hover {
-  border-bottom-color: var(--color-accent);
-  border-top-color: var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
-  border-bottom-width: 0.4em;
-  padding-bottom: 0em;
-  border-top-width: 0.4em;
-  padding-top: 0em;
-}
-
 /*
 Contact Form Formatting
 */
 
-textarea {
-  font: inherit;
-}
-
-input {
-  font: inherit;
-}
-
-button {
+textarea, input, button, select {
   font: inherit;
 }
 
