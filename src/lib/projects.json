@@ -1,37 +1,65 @@
 [
     {
-        "title": "Project Number 1",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Description for project number 1. This is one is the first project that I will talk about. Not sure what it is yet."
+        "title": "A Central Limit Theorem on Two-Sided Descents of Mallows Distributed Elements of Finite Coxeter Groups",
+        "image": "images/project_coxeter_graph.png",
+        "description": "Pure math research paper I wrote in freshman year. It is in algebraic combinatorics, and I did it mostly by myself under the supervision of a postdoc. It studies what are called descents of elements of Coxeter groups and proves a Central Limit Theorem like result.",
+        "year": 2022, 
+        "story": "I started my undergraduate studies as a pure math enthusiast. In my freshman year, I did a pure math UROP and was able to enventually output a paper from it, published in the journal Advances in Applied Mathematics."
     },
     {
-        "title": "Project Number 2",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Description for project number 2"
+        "title": "Stick Fragmentation and Benford's Law",
+        "image": "images/project_benford_histogram.png",
+        "description": "Pure math paper written with others at a math REU called SMALL in Williams College during summer 2023. It studies the distribution of 'stick lengths' that result from theoretical probabilistic processes involving recursively breaking 'sticks' of certain lengths, and proves results relating these distributions to Benford's Law.", 
+        "year": 2023, 
+        "story": "During the summer after my freshman year, I continued doing more math research. I participated in an REU in the rural campus of Williams College and was able to produce some more papers in collaboration with other pure math undergrads. This was one of those papers."
     },
     {
-        "title": "Project Number 3",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Description for project number 3"
+        "title": "Point Configurations in F_q^d",
+        "image": "images/project_configs_f_q_d.png",
+        "description": "Another pure math project done with others at SMALL, resulting in two papers. It concerns the number of realizations of certain 'configurations' in subsets of finite field vector spaces.", 
+        "year": 2023, 
+        "story": "I also did another project at SMALL, working with some of the same people but under a different professor. The previous one was in probability; this one was in combinatorics."
     },
     {
-        "title": "Project Number 4",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Description for project number 4"
+        "title": "Machine Learning Research: SSMs",
+        "image": "images/project_mamba.png",
+        "description": "This was a machine learning research project I did at Aalto University during the summer of 2024. It concerned state space models (e.g., Mamba) and formal languages. I was unable to achieve significant results, but I learned a lot.",
+        "year": 2024,
+        "story": "In 2024, I decided that I wanted to try stuff that wasn't pure math. I did this machine learning research project in a different country. I didn't really come up with any substantial results, but it was a good learning experience."
     },
     {
-        "title": "Project Number 5",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Description for project number 5"
+        "title": "Linear Program Optimization for Green Energy",
+        "image": "images/project_optimization.png",
+        "description": "I conducted some optimization research in the operations research department during the 2025 semesters at MIT. My work concerned a specific lienar program solve that took very long in some cases and how to speed that up using alternative algorithms.",
+        "year": 2025,
+        "story": "After trying out machine learning research, I decided that I wanted a taste of other more applied research areas that still related to some math/theory background. In 2025, I did this operations research UROP and dealt a lot with Julia, Gurobi, and linear programs."
     },
     {
-        "title": "Project Number 6",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Description for project number 6"
+        "title": "Data Visualization with Sketches",
+        "image": "images/project_a1_sketch.png",
+        "description": "This is a sketch I did for my first assignment in 6.C35, in which I sought to show the different in sex distribution across elederly age groups in 1900 vs. 2000.", 
+        "year": 2026,
+        "story": "After having done these projects in many different fields, I decided that I wanted to become better at understanding data. One extremely important skill for interacting with data is data visualization, so I enrolled in 6.C35. For the first assignment, I made a couple sketches of different charts."
     },
     {
-        "title": "Project Number 7",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Description for project number 7"
+        "title": "Exploratory Data Analysis",
+        "image": "images/project_a2_cool_graph.png",
+        "description": "For my second assignment in 6.C35, I explored data regarding single-family zoning in the Boston Metro area. I was able to come up with some interesting results and trends.", 
+        "year": 2026,
+        "story": "For my second assignment in 6.C35, I delved into a topic relevant to the class's theme of affordable housing. Specifically, I did some investigation into the single-family zoning data of the Boston Metro area and attempted to come up with interesting visualizations. I had to learn how to use Tableau for this."
+    }, 
+    {
+        "title": "Improving on a Visualization", 
+        "image": "images/project_a3_my_good_vis.png", 
+        "description": "For my third assignment in 6.C35, I first looked at a famous Covid-19 visualization and analyzed how it was effective and flawed. I then sought to create my own visualization using the same data, using DataWrapper.", 
+        "year": 2026,
+        "story": "For my third assignment in 6.C35, I decided to take a step back from the affordable housing theme and look at Covid-19 cases. Here, I was practicing how to make a single visualization effective and high-quality in order to sharpen my data visualization skills."
+    }, 
+    {
+        "title": "Persuasive and Deceptive Visualizations", 
+        "image": "images/project_a4_deceptive_vis.png", 
+        "description": "This was my final individual assignment in 6.C35. It involved data regarding interent infrastructure in various countries. I was specifically trying to compare internet access in the USA and the rest of the world over the years. I created two visualization dashboards that expressed opposite ideas. This required me to make some deceptive choices in addition to just persuasive ones.", 
+        "year": 2026, 
+        "story": "For my final assignment in 6.C35, I took on the challenge of making visualizations that expressed conflicting ideas. This required some creativity and deceptive choices, which was fun to come up with."
     }
 ]
