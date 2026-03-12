@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import Scrolly from "svelte-scrolly";
     let scrollyProgress = 0;
 
@@ -23,7 +24,7 @@
 	    <!-- Visualizations here (these will stay sticky) -->
         <div class="scrolly-wrapper">
             <h3>{sorted_projects[activeProjectIdx].year}</h3>
-            <img src={sorted_projects[activeProjectIdx].image} alt="">
+            <img src="{base}/{sorted_projects[activeProjectIdx].image}" alt="">
         </div>
         <!-- {scrollyProgress}
         {activeProjectIdx} -->
