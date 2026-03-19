@@ -5,6 +5,33 @@
 
   let years = projects.map(proj => proj.year)
   let range = Math.max(...years) - Math.min(...years);
+
+  import { onMount } from 'svelte';
+  import * as d3 from 'd3';
+
+  // let rawData = [];
+  // let wrangled = [];
+  // let wrangled_perc = [];
+  // let lines_total = 0;
+
+  // onMount(async () => {
+  //   rawData = await d3.json('/lab6_example.json');
+  //   lines_total = d3.sum(rawData, d => d.lines);
+  //   wrangled = d3.rollups(
+  //     rawData,
+  //     v => d3.sum(v, d => d.lines),
+  //     d => d.language
+  //   );
+  //   wrangled_perc = d3.rollups(
+  //     rawData,
+  //     v => d3.sum(v, d => d.lines)/lines_total,
+  //     d => d.language
+  //   )
+  // });
+
+  import Bar from '$lib/Bar.svelte';
+  $: barData = d3.rollups(projects, v => v.length, d => d.year)
+    .map(([year, count]) => ({ label: String(year), value: count }));
 </script>
 
 <svelte:head>
@@ -12,6 +39,8 @@
 </svelte:head>
 
 <h1>My {projects.length} Projects Over {range} Years</h1>
+
+<Bar data={barData}/>
 
 <p>Scroll down to see my a timeline of my projects and how they relate to my professional and personal life</p>
 
@@ -29,6 +58,12 @@
     <Project data={p} />
   {/each}
 </div>
+
+<!-- <section>
+  <h2>Data wrangling result</h2>
+  <pre>{JSON.stringify(wrangled, null, 2)}</pre>
+  <pre>{JSON.stringify(wrangled_perc, null, 2)}</pre>
+</section> -->
 
 <style>
   .outro {

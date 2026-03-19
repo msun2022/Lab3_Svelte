@@ -6,7 +6,7 @@
 <article>
     <h3>{data.title}</h3>
     <img src="{base}/{data.image}" alt="">
-    <p>{data.description}</p>
+    <p><strong class="year-label">{data.year}</strong>{data.description}</p>
 </article>
 
 <style>
@@ -22,5 +22,12 @@
 
     article h3 {
         margin: 0; 
+    }
+    
+    .year-label {
+        margin-right: 0.3rem;
+        border-bottom: 0.1rem solid gray;
+        border-right: 0.1rem solid gray;
+        padding-right: 0.2rem;
     }
 </style>
