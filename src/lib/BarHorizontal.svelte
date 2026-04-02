@@ -2,11 +2,12 @@
     import * as d3 from 'd3';
 
     let width = 400;
-    let height = 300;
+    let height = 170;
 
     export let data = [];
+    export let title = "";
 
-    let margin = { top: 40, right: 10, bottom: 80, left: 60 };
+    let margin = { top: 40, right: 70, bottom: 70, left: 60 };
     let innerWidth  = width  - margin.left - margin.right;
     let innerHeight = height - margin.top  - margin.bottom;
 
@@ -25,7 +26,10 @@
     let xAxis, yAxis;
 
     $: if (xAxis && yAxis) {
-        d3.select(xAxis).call(d3.axisBottom(valScale));
+        d3.select(xAxis).call(
+            d3.axisBottom(valScale)
+            .ticks(Math.min(d3.max(data, d => d.value), 10))
+        );
         d3.select(yAxis).call(d3.axisLeft(catScale));
     }
 
@@ -61,21 +65,21 @@
                 />
                 <!-- leader line -->
                 <line
-                    x1={valScale(maxBar.value) / 2}
-                    y1={catScale(maxBar.label) + catScale.bandwidth()}
-                    x2={valScale(maxBar.value) / 2}
-                    y2={catScale(maxBar.label) + catScale.bandwidth() + 15}
+                    x1={valScale(maxBar.value)}
+                    y1={catScale(maxBar.label) + catScale.bandwidth() / 2}
+                    x2={valScale(maxBar.value) + 15}
+                    y2={catScale(maxBar.label) + catScale.bandwidth() / 2}
                     stroke="currentColor"
                     stroke-width="1"
                 />
                 <!-- annotation text at end of leader line -->
                 <text
-                    x={valScale(maxBar.value) / 2}
-                    y={catScale(maxBar.label) + catScale.bandwidth() + 15}
-                    text-anchor="middle"
-                    dominant-baseline="hanging"
+                    x={valScale(maxBar.value) + 20}
+                    y={catScale(maxBar.label) + catScale.bandwidth() / 2}
+                    text-anchor="start"
+                    dominant-baseline="middles"
                     class="annotation">
-                    Language with most lines
+                    Most lines
                 </text>
             {/if}
         </g>
@@ -86,7 +90,7 @@
             y={margin.top / 2}
             text-anchor="middle"
             class="chart-title">
-            Lines of Code per Language
+            {title}
         </text>
 
         <!-- x-axis label -->
@@ -173,21 +177,21 @@
 
     /* Chart Title */
     .chart-title {
-        font-size: 1em;
+        font-size: 0.7em;
         font-weight: bold;
         fill: currentColor;
     }
 
     /* Chart Axes Styling */
     .axis-label {
-        font-size: 0.8em;
+        font-size: 0.5em;
         fill: currentColor;
     }
 
     /* Annotation */
     .annotation {
-        font-size: 0.7em;
-        fill: gray;
+        font-size: 0.4em;
+        fill: color-mix(in srgb, currentColor, transparent 30%);
         font-style: italic;
     }
 </style>
