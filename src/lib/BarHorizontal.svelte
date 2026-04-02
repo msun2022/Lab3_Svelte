@@ -79,7 +79,7 @@
                     text-anchor="start"
                     dominant-baseline="middles"
                     class="annotation">
-                    Most lines
+                    Language with most lines
                 </text>
             {/if}
         </g>
