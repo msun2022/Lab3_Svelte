@@ -7,7 +7,7 @@
     export let data = [];
     export let title = "";
 
-    let margin = { top: 40, right: 70, bottom: 70, left: 60 };
+    let margin = { top: 40, right: 83, bottom: 70, left: 60 };
     let innerWidth  = width  - margin.left - margin.right;
     let innerHeight = height - margin.top  - margin.bottom;
 
