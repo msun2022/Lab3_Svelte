@@ -40,8 +40,8 @@
 
     // Bar chart data, use selected commits if some selected
     $: selectData = (
-        clickedCommits.length > 0 
-        ? clickedCommits.flatMap(d => d.lines)
+        selectedCommits.length > 0 
+        ? selectedCommits.flatMap(d => d.lines)
         : locData
     );
     $: selectCounts = d3.rollup(selectData, v => v.length, d => d.type);
@@ -56,8 +56,8 @@
     // Conditional title for horizontal bar chart
     let title = "";
     $: title = (
-        clickedCommits.length > 0 
-        ? "Selected Commits: Lines of Code per Language"
+        selectedCommits.length > 0 
+        ? `${selectedCommits.length} Selected Commits: Lines of Code per Language`
         : "Website Breakdown: Lines of Code per Language"
     );
 
@@ -142,6 +142,53 @@
             }
         }
     }
+
+    // Brush stuff
+    let svg;
+    $: {
+        d3.select(svg).call(d3.brush()
+            .extent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]])
+            .on("start brush end", brushed)); 
+
+        d3.select(svg).selectAll(".dots, .overlay ~ *").raise();
+    }
+
+    $: brushSelection = null;
+    function brushed (evt) {
+        brushSelection = evt.selection;
+    }
+    function isCommitBrushed (commit) {
+        if (!brushSelection) {
+            return false;
+        }
+        // TODO return true if commit is within brushSelection
+        // and false if not
+        let min_x = brushSelection[0][0], max_x = brushSelection[1][0];
+        let min_y = brushSelection[0][1], max_y = brushSelection[1][1];
+        let x = xScale(commit.datetime), y = yScale(commit.hourFrac);
+        return (x >= min_x) && (x <= max_x) && (y >= min_y) && (y <= max_y);
+    }
+    $: brushedCommits = brushSelection ? commits.filter(isCommitBrushed) : [];
+    $: selectedCommits = Array.from(new Set([...clickedCommits, ...brushedCommits]));
+
+    // Line chart stuff
+    let linesByDate = [];
+    $: {
+        const editsPerDate = d3.rollups(
+            locData, 
+            v => v.length,
+            d => d3.timeDay.floor(d.datetime)
+        ).map(([date, count]) => ({ date, count }));
+
+        const [minDate, maxDate] = d3.extent(editsPerDate, d => d.date);
+        const allDates = d3.timeDays(minDate, d3.timeDay.offset(maxDate, 1));
+
+        linesByDate = allDates.map(date => ({
+            date,
+            count: editsPerDate.find(d => d.date.getTime() === date.getTime())?.count ?? 0
+        }));
+    }
+    import LineChart from '../../lib/LineChart.svelte';
 </script>
 
 <svelte:head>
@@ -152,7 +199,7 @@
 
 <!-- Scatterplot -->
 <h3 style="text-align: center;">Commits by Date and Time of Day</h3>
-<svg viewBox="0 0 {width} {height}">
+<svg viewBox="0 0 {width} {height}" bind:this={svg}>
     <g transform="translate(0, {usableArea.bottom})" bind:this={xAxis} />
     <g transform="translate({usableArea.left}, 0)" bind:this={yAxis} />
     <g class="gridlines" transform="translate({usableArea.left}, 0)" 
@@ -167,7 +214,7 @@
                 cy={ yScale(commit.hourFrac) }
                 r={ rScale(commit.totalLines) }
                 fill="steelblue"
-                class:selected={ clickedCommits.includes(commit) }
+                class:selected={ selectedCommits.includes(commit) }
             />
         {/each}
     </g>
@@ -208,6 +255,8 @@
 </dl>
 
 <BarHorizontal data={barData} title={title} />
+
+<LineChart data={linesByDate} />
 
 <style>
 	svg {
