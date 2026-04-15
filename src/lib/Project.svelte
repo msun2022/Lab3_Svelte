@@ -6,7 +6,13 @@
 <article>
     <h3>{data.title}</h3>
     <img src="{base}/{data.image}" alt="">
-    <p><strong class="year-label">{data.year}</strong>{data.description}</p>
+    <p>
+        <strong class="year-label">{data.year}</strong>
+        {#if data.url}
+            <a href={data.url}>See it here.</a>
+        {/if}
+        {data.description}
+    </p>
 </article>
 
 <style>

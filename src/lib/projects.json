@@ -4,21 +4,24 @@
         "image": "images/project_coxeter_graph.png",
         "description": "Pure math research paper I wrote in freshman year. It is in algebraic combinatorics, and I did it mostly by myself under the supervision of a postdoc. It studies what are called descents of elements of Coxeter groups and proves a Central Limit Theorem like result.",
         "year": 2022, 
-        "story": "I started my undergraduate studies as a pure math enthusiast. In my freshman year, I did a pure math UROP and was able to enventually output a paper from it, published in the journal Advances in Applied Mathematics."
+        "story": "I started my undergraduate studies as a pure math enthusiast. In my freshman year, I did a pure math UROP and was able to enventually output a paper from it, published in the journal Advances in Applied Mathematics.",
+        "url": "https://arxiv.org/abs/2406.07597"
     },
     {
         "title": "Stick Fragmentation and Benford's Law",
         "image": "images/project_benford_histogram.png",
         "description": "Pure math paper written with others at a math REU called SMALL in Williams College during summer 2023. It studies the distribution of 'stick lengths' that result from theoretical probabilistic processes involving recursively breaking 'sticks' of certain lengths, and proves results relating these distributions to Benford's Law.", 
         "year": 2023, 
-        "story": "During the summer after my freshman year, I continued doing more math research. I participated in an REU in the rural campus of Williams College and was able to produce some more papers in collaboration with other pure math undergrads. This was one of those papers."
+        "story": "During the summer after my freshman year, I continued doing more math research. I participated in an REU in the rural campus of Williams College and was able to produce some more papers in collaboration with other pure math undergrads. This was one of those papers.",
+        "url": "https://arxiv.org/abs/2309.00766"
     },
     {
         "title": "Point Configurations in F_q^d",
         "image": "images/project_configs_f_q_d.png",
         "description": "Another pure math project done with others at SMALL, resulting in two papers. It concerns the number of realizations of certain 'configurations' in subsets of finite field vector spaces.", 
         "year": 2023, 
-        "story": "I also did another project at SMALL, working with some of the same people but under a different professor. The previous one was in probability; this one was in combinatorics."
+        "story": "I also did another project at SMALL, working with some of the same people but under a different professor. The previous one was in probability; this one was in combinatorics.",
+        "url": "https://arxiv.org/abs/2308.10853"
     },
     {
         "title": "Machine Learning Research: SSMs",
@@ -46,20 +49,31 @@
         "image": "images/project_a2_cool_graph.png",
         "description": "For my second assignment in 6.C35, I explored data regarding single-family zoning in the Boston Metro area. I was able to come up with some interesting results and trends.", 
         "year": 2026,
-        "story": "For my second assignment in 6.C35, I delved into a topic relevant to the class's theme of affordable housing. Specifically, I did some investigation into the single-family zoning data of the Boston Metro area and attempted to come up with interesting visualizations. I had to learn how to use Tableau for this."
+        "story": "For my second assignment in 6.C35, I delved into a topic relevant to the class's theme of affordable housing. Specifically, I did some investigation into the single-family zoning data of the Boston Metro area and attempted to come up with interesting visualizations. I had to learn how to use Tableau for this.", 
+        "url": "https://msun2022.github.io/6.C35_A2/A2_report"
     }, 
     {
         "title": "Improving on a Visualization", 
         "image": "images/project_a3_my_good_vis.png", 
         "description": "For my third assignment in 6.C35, I first looked at a famous Covid-19 visualization and analyzed how it was effective and flawed. I then sought to create my own visualization using the same data, using DataWrapper.", 
         "year": 2026,
-        "story": "For my third assignment in 6.C35, I decided to take a step back from the affordable housing theme and look at Covid-19 cases. Here, I was practicing how to make a single visualization effective and high-quality in order to sharpen my data visualization skills."
+        "story": "For my third assignment in 6.C35, I decided to take a step back from the affordable housing theme and look at Covid-19 cases. Here, I was practicing how to make a single visualization effective and high-quality in order to sharpen my data visualization skills.", 
+        "url": "https://msun2022.github.io/portfolio/projects/vis_critique/"
     }, 
     {
         "title": "Persuasive and Deceptive Visualizations", 
         "image": "images/project_a4_deceptive_vis.png", 
         "description": "This was my final individual assignment in 6.C35. It involved data regarding interent infrastructure in various countries. I was specifically trying to compare internet access in the USA and the rest of the world over the years. I created two visualization dashboards that expressed opposite ideas. This required me to make some deceptive choices in addition to just persuasive ones.", 
         "year": 2026, 
-        "story": "For my final assignment in 6.C35, I took on the challenge of making visualizations that expressed conflicting ideas. This required some creativity and deceptive choices, which was fun to come up with."
+        "story": "For my final assignment in 6.C35, I took on the challenge of making visualizations that expressed conflicting ideas. This required some creativity and deceptive choices, which was fun to come up with.", 
+        "url": "https://msun2022.github.io/portfolio/projects/persuasive_deceptive/"
+    },
+    {
+        "title": "Geospatial Visualization: Bike Watching",
+        "image": "images/project_lab_map_vis.png", 
+        "description": "This was one of my later 6.C35 labs in which I handled GeoJSON data and created an interactive map visualization using Svelte, D3.js, and Mapbox. The focus was on bike traffic data in the Boston/Cambridge areas and how this was affected by time.",
+        "year": 2026,
+        "story": "In one of my later labs for 6.C35, after having gained experience with the basics of data visualizaiton in my assignments and previous labs, I took on the specific challenge of geospatial visualizaiton with GeoJSON data.",
+        "url": "https://msun2022.github.io/Lab_Geospatial_Vis/"
     }
 ]
